@@ -1,10 +1,8 @@
+dataset/
+
 fruits&veggies/
 runs/runs
 
-runs/detect/train
-runs/detect/train2
-runs/detect/train3
+runs/
 
-videos/apples1.mp4
-videos/apples1.mp4_out.mp4
-videos/apples2.mp4
+videos/
