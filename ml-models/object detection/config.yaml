@@ -1,0 +1,10 @@
+path: C:/Users/nathu/Desktop/flipkart_grid/project/object detection/dataset # dataset root dir
+train: images/train # train images (relative to 'path')
+val: images/train # val images (relative to 'path')
+
+# Classes
+names:
+  0: Apples
+  1: Pineapple
+  2: Water Bottle
+  3: Milk Bottle
