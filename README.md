@@ -1,4 +1,4 @@
-# Flipkart Robotics and Object Detection WebApp
+# Flipkart Robotics Object Detection and freshness detection WebApp
 
 ## Overview
 
