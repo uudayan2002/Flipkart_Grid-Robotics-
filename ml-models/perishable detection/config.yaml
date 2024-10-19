@@ -1,0 +1,10 @@
+path: C:/Users/nathu/Desktop/flipkart_grid/project/perishable detection/dataset # dataset root dir
+train: images/train # train images (relative to 'path')
+val: images/train # val images (relative to 'path')
+
+# Classes
+names:
+  0: apple(good)
+  1: apple(rotten)
+  2: banana(good)
+  3: banana(rotten)
