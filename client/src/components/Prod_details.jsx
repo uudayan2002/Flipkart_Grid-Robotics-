@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import {
   Box,
   Text,
+  Button,
   Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  AccordionIcon,
-  Checkbox,
   Stack,
 } from '@chakra-ui/react';
 
@@ -17,48 +16,92 @@ function Prod_details() {
 
   const handlePackedChange = () => {
     setIsPacked(!isPacked);
-    if (isUnpacked) setIsUnpacked(false); 
+    if (isUnpacked) setIsUnpacked(false);
   };
 
   const handleUnpackedChange = () => {
     setIsUnpacked(!isUnpacked);
-    if (isPacked) setIsPacked(false); 
+    if (isPacked) setIsPacked(false);
   };
+
   return (
-    <Box bg="#40513B" borderRadius="20px" border="2px solid #EDF1D6" color="#EDF1D6" display="flex" flexDirection="column" alignItems="center" justifyContent="flex-start" gridRow="span 2" p={4} position="relative">
-<Stack direction="row" spacing={4} mt="20px" align="center">
-        <Checkbox isChecked={isPacked} onChange={handlePackedChange}>
-          Packed
-        </Checkbox>
-        <Checkbox isChecked={isUnpacked} onChange={handleUnpackedChange}>
-          UnPacked
-        </Checkbox>
+    <Box
+      bg="#40513B"
+      borderRadius="20px"
+      border="2px solid #EDF1D6"
+      color="#EDF1D6"
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="flex-start"
+      gridRow="span 2"
+      p={4}
+      position="relative"
+    >
+      <Stack direction="row" spacing={4} mt="20px" align="center">
+        {/* Checkboxes for Packed and Unpacked can be re-added here if needed */}
       </Stack>
-      <Accordion defaultIndex={[0]} allowMultiple width="100%" mt="20px">
-        
-        <AccordionItem>
+
+      <Accordion width="100%" mt="20px">
+      <AccordionItem>
           <h2>
-            <AccordionButton>
-              
-              <Box as="span" flex="2" textAlign="left">
-               
-                <Text fontSize='xl' as='b'>Maggi 70g</Text>
+            <AccordionButton as="div" display="flex" alignItems="center">
+              <Box as="span" flex="1" textAlign="left">
+              <Text fontSize="xl" as="b">Item 1</Text>
               </Box>
-              <AccordionIcon />
+              {/* Button to toggle accordion */}
+              <Button
+                colorScheme="teal"
+                size="sm"
+                onClick={(e) => e.target.closest('.chakra-accordion-item').click()}
+                mr={2}
+              >
+                Toggle
+              </Button>
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </AccordionPanel>
         </AccordionItem>
 
         <AccordionItem>
           <h2>
-            <AccordionButton>
+            <AccordionButton as="div" display="flex" alignItems="center">
               <Box as="span" flex="1" textAlign="left">
-                Section 2 title
+              <Text fontSize="xl" as="b">Item 2</Text>
               </Box>
-              <AccordionIcon />
+              {/* Button to toggle accordion */}
+              <Button
+                colorScheme="teal"
+                size="sm"
+                onClick={(e) => e.target.closest('.chakra-accordion-item').click()}
+                mr={2}
+              >
+                Toggle
+              </Button>
+            </AccordionButton>
+          </h2>
+          <AccordionPanel pb={4}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </AccordionPanel>
+        </AccordionItem>
+
+        <AccordionItem>
+          <h2>
+            <AccordionButton as="div" display="flex" alignItems="center">
+              <Box as="span" flex="1" textAlign="left">
+              <Text fontSize="xl" as="b">Item 3</Text>
+              </Box>
+              {/* Button to toggle accordion */}
+              <Button
+                colorScheme="teal"
+                size="sm"
+                onClick={(e) => e.target.closest('.chakra-accordion-item').click()}
+                mr={2}
+              >
+                Toggle
+              </Button>
             </AccordionButton>
           </h2>
           <AccordionPanel pb={4}>
