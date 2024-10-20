@@ -8,6 +8,7 @@ import {
   AccordionButton,
   AccordionPanel,
   Stack,
+  Heading
 } from '@chakra-ui/react';
 
 function Prod_details() {
@@ -38,11 +39,17 @@ function Prod_details() {
       p={4}
       position="relative"
     >
+
+      <Heading as="h1" size="lg" mb={4} textAlign="center">
+        Product Details
+      </Heading>  
+      
       <Stack direction="row" spacing={4} mt="20px" align="center">
-        {/* Checkboxes for Packed and Unpacked can be re-added here if needed */}
+      
       </Stack>
 
       <Accordion width="100%" mt="20px">
+      
       <AccordionItem>
           <h2>
             <AccordionButton as="div" display="flex" alignItems="center">
@@ -56,7 +63,7 @@ function Prod_details() {
                 onClick={(e) => e.target.closest('.chakra-accordion-item').click()}
                 mr={2}
               >
-                Toggle
+                Detect Label
               </Button>
             </AccordionButton>
           </h2>
@@ -78,7 +85,7 @@ function Prod_details() {
                 onClick={(e) => e.target.closest('.chakra-accordion-item').click()}
                 mr={2}
               >
-                Toggle
+                Detect Label
               </Button>
             </AccordionButton>
           </h2>
@@ -100,7 +107,7 @@ function Prod_details() {
                 onClick={(e) => e.target.closest('.chakra-accordion-item').click()}
                 mr={2}
               >
-                Toggle
+                Detect Label
               </Button>
             </AccordionButton>
           </h2>
