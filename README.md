@@ -14,11 +14,11 @@ This project is a web-based application developed for Flipkart to optimize objec
    - Utilizes YOLOv8 for real-time object detection and quality/freshness analysis.
    - Simulates gantry robot movements using Gazebo to handle object selection.
    - Provides detailed information after object scanning:
-     - **Non-perishable items**:
+     - **Non-perishable items(packaged products)**:
        - Expiry date
        - Manufacture date
        - Delivery status (safe for delivery or not)
-     - **Perishable items**:
+     - **Perishable items(fruits and vegetables)**:
        - Estimated shelf life (time left before spoilage)
 
 ### 3. **Image Processing**
